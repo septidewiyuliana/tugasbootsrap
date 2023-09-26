@@ -1,1 +1,0 @@
-import"./main.6e2c4939.js";function t(){import("data:text/javascript,")}export{t as __vite_legacy_guard};

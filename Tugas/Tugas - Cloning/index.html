@@ -1,0 +1,169 @@
+<!DOCTYPE html><html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon_1.png">
+    <title>EduWork - Platform Mentoring &amp; Penyaluran Kerja</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+  <body class="bg-[#f6fcff] text-[#404040] font-[Poppins]">
+    <!-- Navabar -->
+    <nav>
+      <div class="w-[90%] lg:w-[1016px] container mx-auto py-2 md:py-4">
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
+          <a href="https://eduwork.id" class="flex items-center">
+            <img class="h-6 sm:h-7" src="images/favicon.png" alt="Eduwork Logo">
+          </a>
+          <div class="flex gap-3 md:order-2">
+            <button type="button" id="btn-login-modal" class="text-white hidden md:block bg-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0" data-modal-toggle="modalLogin">
+              Login
+            </button>
+            <a type="button" class="text-white hidden md:block bg-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0" href="https://eduwork.id/m">
+              Register
+            </a>
+            <script src="https://accounts.google.com/gsi/client" async=""></script>
+            <div id="g_id_onload" data-client_id="862153642830-7r199qa44obsl1jfp22s337mdstbedem.apps.googleusercontent.com" data-context="signin" data-callback="googleLoginEndpoint" data-itp_support="true">
+            </div>
+            <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg block md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+            <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row gap-[10px] md:gap-[40px] md:mt-0 md:text-sm md:font-semibold md:border-0 md:bg-transparent">
+              <button onclick="document.location.href='https://eduwork.id'" class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:dark:hover:bg-transparent">
+                Home
+              </button>
+              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:dark:hover:bg-transparent">
+                Kelas
+                <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+              </button>
+              <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                  <li>
+                    <a href="https://eduwork.id/kelas?types[]=Private" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Private Mentoring</a>
+                  </li>
+                  <li>
+                    <a href="https://eduwork.id/kelas?types[]=Bootcamp" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Bootcamp</a>
+                  </li>
+                  <li>
+                    <a href="https://eduwork.id/kelas?types[]=Webinar" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Webinar</a>
+                  </li>
+                </ul>
+              </div> 
+              <div id="dropdownNavbarClass" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Private Mentoring</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Webinar</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mini Bootcamp</a>
+                  </li>
+                </ul>
+              </div>
+              <a href="https://api.whatsapp.com/send?phone=628886669969&amp;text=Hallo Eduwork, saya perlu bantuan." target="_blank" class="flex items-center justify-between w-full py-2 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:dark:hover:bg-transparent">
+                Hubungi Admin
+              </a>
+              <button type="button" data-modal-toggle="modalLogin" class="text-white block md:hidden bg-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0">
+                Login
+              </button>
+              <a href="https://eduwork.id/m" class="text-white block md:hidden bg-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0">
+                Register
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+<!-- Hero -->
+
+<div class="container mx-auto m-0">
+  <section id="Hero" class="relative w-full bg-center xl:min-w-[1306px] h-auto md:h-[730px] bg-no-repeat bg-contain bg-top lg:bg-cover" style="background-image: url(images/bg-hero.png);">
+  
+    <div class="flex md:flex-row w-[90%] md:w-full mx-auto h-fit lg:w-[1016px] translate-y-[140px] z-[10] relative">
+      <div class="w-full block md:flex justify-between items-center">
+        <div class="flex flex-col w-[100%] md:w-[50%] z-30">
+          <h1 class="font-[800] w-full md:w-[372px] leading-[120%] text-[36px] md:text-[40px] mx-auto md:mx-0 text-left mt-[-50px] md:mt-0">
+            Pelatihan &amp; Penyaluran kerja.
+          </h1>
+          <div class="flex-col w-full md:w-[418px] h-[233px] mt-[37px] md:mt-[65px]">
+            <div class="w-fit h-fit float-left mr-[14.27px]">
+              <div class="dot flex w-[37.73px] h-[36.09px] bg-[#187CFF] border-[4.10138px] border-[#e7f7ff] rounded-[82.0276px] mb-[6px] shadow-dot text-white text-center py-[8.20276px 16.4055px] justify-center items-center gap-[8.2px]">
+                1
+              </div>
+              <div class="relative flex w-[37.73px] h-[80.38px] md:h-[50.38px] text-center my-[8.20276px 16.4055px] justify-center items-center">
+                <div class="arrow w-[59px] absolute top-[38px] md:top-[20px] md:w-[40px] h-0">
+                  <div class="absolute right-0 -top-[4.25px] h-[8px] w-[8px] border-[2px] rotate-45 border-l-0 border-b-0 border-r-[#187CFF] border-t-[#187CFF]"></div>
+                </div>
+              </div>
+              <div class="dot flex w-[37.73px] h-[36.09px] bg-[#187CFF] border-[4.10138px] border-[#e7f7ff] rounded-[82.0276px] mb-[6px] shadow-dot text-white text-center py-[8.20276px 16.4055px] justify-center items-center gap-[8.2px]">
+                2
+              </div>
+              <div class="relative flex w-[37.73px] h-[80.38px] md:h-[50.38px] text-center my-[8.20276px 16.4055px] justify-center items-center">
+                <div class="arrow w-[59px] absolute top-[38px] md:top-[20px] md:w-[40px] h-0">
+                  <div class="absolute right-0 -top-[4.25px] h-[8px] w-[8px] border-[2px] rotate-45 border-l-0 border-b-0 border-r-[#187CFF] border-t-[#187CFF]"></div>
+                </div>
+              </div>
+              <div class="dot flex w-[37.73px] h-[36.09px] bg-[#187CFF] border-[4.10138px] border-[#e7f7ff] rounded-[82.0276px] shadow-dot text-white text-center py-[8.20276px 16.4055px] justify-center items-center gap-[8.2px]">
+                3
+              </div>
+              <div class="flex w-[37.73px] h-[39px] md:h-0 text-center py-[8.20276px 16.4055px] justify-center items-center"></div>
+            </div>
+            <div class="w-full md:w-[418px] h-fit tracking-[0.01em]">
+              <h4 style="margin-top: 8px;" class="leading-[24px] text-[20px] md:text-[16px] font-semibold my-[10px] md:my-0">
+                Daftar, Get Free Class!
+              </h4>
+              <p class="text-[#4E5053] text-[16px] md:text-[14px] font-normal leading-[21px] mb-[43px] md:mb-[31px]">
+                Join komunitas belajar, dapatkan akses kelas &amp; materi gratis
+              </p>
+              <h4 class="leading-[24px] text-[20px] md:text-[16px] font-semibold my-[10px] md:my-0">
+                Belajar Intensif
+              </h4>
+              <p class="text-[#4E5053] text-[16px] md:text-[14px] font-normal leading-[21px] mb-[26px] md:mb-[30px]">
+                Belajar didampingi virtual assistant &amp; mentor expert via grup &amp; 1-on-1 zoom mentoring
+              </p>
+              <h4 class="leading-[24px] text-[20px] md:text-[16px] font-semibold mb-[10px] md:mb-0">
+                Penyaluran Kerja Dijamin
+              </h4>
+              <p class="text-[#4E5053] text-[16px] md:text-[14px] font-normal leading-[21px]">
+                Dapatkan pekerjaan dengan gaji s.d 10jt lebih
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col md:flex-row mt-[100px] md:mt-[71px] gap-[20px] mx-[5%] md:mx-0 md:gap-3 z-20">
+            <a href="https://eduwork.id/m" style="text-align: center;" class="relative z-20 md:ml-0 pl-[47px] pr-[46px] py-[11px] w-full md:w-fit rounded-[5px] font-medium text-[22px] md:text-[14px] bg-[#187cff] text-[#f6fcff] mr-[22px]">
+              Daftar Gratis
+              <div class="absolute -top-[10px] -right-[15px] w-[48px] h-[25px] bg-[#ff0000] text-white py-[5px] px-[11px] text-[12px] rounded-[999999px]">
+                Free
+              </div>
+            </a>
+            <a href="https://eduwork.id/m?class_id=148" style="text-align: center;" class="pl-[35px] pr-[34px] py-[11px] rounded-[5px] font-medium text-[22px] md:text-[14px] bg-[#ffd200] z-20">
+              Konsultasi Dulu
+            </a>
+          </div>
+          <div class="mt-[29px] text-[14px] md:text-[16px] text-center md:text-left font-normal z-10">
+            <h4 class="">
+              <span class="font-[800]">75,660</span> Students &amp;
+              <span class="font-[800]">165</span> Mentors has joined!
+            </h4>
+          </div>
+        </div>
+        <div class="mt-[62px] lg:mt-0 w-full z-[1] relative lg:-translate-x-[40px]">
+          <img src="images/t-aniq.png" alt="" srcset="" class="w-full z-[1]" id="aniq-img">
+          <div class="absolute w-[80%] bg-white left-[50%] lg:-translate-y-[6px] -translate-x-[46%] -bottom-[5px] p-4 rounded-lg font-semibold" style="display: none;" id="demo-typing"></div>
+        </div>
+      </div>
+    </div>
+    <div class="absolute top-0 left-0 w-[200%] md:w-full h-[740px] hero-gradasi z-[9] hidden md:block"></div>
+    <div class="hero-gradasi2 absolute top-0 right-0 w-[5%] lg:w-[216px] h-[800px]"></div>
